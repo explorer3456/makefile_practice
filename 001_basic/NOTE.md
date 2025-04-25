@@ -12,8 +12,6 @@ $^ : all the .c sources
 
 
 ```
-> phony?
-
 **Makefile prefix**
 > some makefile syntax
 ```
