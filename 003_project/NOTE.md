@@ -31,9 +31,21 @@
 > copy output files, check version .. etc
 
 
+# Makefile design steps
+> here are simple guideline to design makefile
+**Step1. Define toolchain, or external tools that is required**
+> define path of any toolchain including external one in makefile variable
+**Step2. Define debug target to debug makefile**
+> define .PHONY: debug target to print debug data of makefile
+**Step3. Define lists of all input source files in project**
+> you can define directory name variable to do this. ( ex) common, drivers, app .. etc)
+> anyway, the list is needed because it can be used to define the object file list
+**Step4. Define output directory and object file list**
+> final goal is generate final.elf file. before that, we need to put all the objects file into
+> some build/objs directory.
+> so define the output directory and object file list using input source file lists.
 
-# Important specific makefile design
-**How do we get list of source files ?**
+
 
 # To Do
 **Try seperate makefile per module**
