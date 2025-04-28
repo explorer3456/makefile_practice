@@ -19,13 +19,15 @@ CFLAGS += -c
 CFLAGS += -ggdb
 CFLAGS += -gdwarf-3
 CFLAGS += -std=c99
+CFLAGS += -static-libgcc
 
 ### C Linker flags
 #LDFLAGS += -T $(linkerdir)/linker.ld
 #LDFLAGS += -Ttext=0x0
 LDFLAGS += -Xlinker -static
-LDFLAGS += -nostartfiles
+# LDFLAGS += -nostartfiles
 LDFLAGS += -Wl,--map=$(output_dir)/map.txt
+LDFLAGS += -static-libgcc
 
 
 .PHONY: debug
@@ -86,6 +88,7 @@ debug:
 
 $(output_dir)/program.elf: $(OBJECT_LIST)
 	$(info --target is build with $(OBJECT_LIST))
+	$(LD) $(LDFLAGS) $(^) -o $(@)
 
 # according to software type, build rule can be different.
 # device driver may need non-optimization flags becuase it mostly control registers.
