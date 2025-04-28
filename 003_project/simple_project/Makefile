@@ -63,17 +63,21 @@ OBJECT_LIST = $(OBJECT_COMMON) $(OBJECT_DRIVERS) $(OBJECT_APP)
 CFLAGS += -Iinclude
 
 # add header file and object file dependency
+CFLAGS += -MD
+
 DEPS=$(OBJECT_LIST:%.o=%.d)
--include DEPS
+-include $(DEPS)
 
 # create directory first
 all: $(output_dir)/program.elf
+	
 
 clean:
 	rm -rf $(output_dir)
 
 debug:
 	$(info debug $(CFLAGS))
+	$(info debug $(DEPS))
 	
 
 $(output_dir)/program.elf: $(OBJECT_LIST)
