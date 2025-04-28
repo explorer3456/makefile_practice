@@ -48,8 +48,11 @@
 > CLFAGS and LDFLAGS has default option such as build with gdb debug symbol or dwarf information
 > If you use linker script, linker script can be added to LDFLAGS. 
 > Important, the path to header files must be added to CFLAGS.
-
-
+**STep6. Add header dependency**
+> with -MDD option in CFLAGS, gcc automatically generate header dependency info file(*.d).
+> you should include that files to Makefile so that when header file changes, 
+> source code that is related to header file can be recompiled.
+ 
 
 # To Do
 **Try seperate makefile per module**

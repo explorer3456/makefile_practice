@@ -63,10 +63,15 @@ HEADER_COMMON=$(shell find include/$(common_dir) -name "*.h")
 HEADER_DRIVERS=$(shell find include/$(drivers_dir) -name "*.h")
 HEADER_APP=$(shell find include/$(app_dir) -name "*.h")
 HEADER_LIST=$(HEADER_COMMON) $(HEADER_DRIVERS) $(HEADER_APP)
+CFLAGS += $(addprefix -I, $(HEADER_LIST))
+
+# add header file and object file dependency
+DEPS=$(OBJECT_LIST:%.o=%.d)
+-include DEPS
 
 
 debug:
-	$(info debug $(HEADER_LIST))
+	$(info debug $(CFLAGS))
 
 all:
 	$(info make all)
