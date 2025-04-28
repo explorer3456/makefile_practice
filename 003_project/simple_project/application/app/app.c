@@ -3,6 +3,7 @@
 #include <drivers/uart/uart.h>
 #include <drivers/i2c/i2c.h>
 #include <drivers/dram/dram.h>
+#include <drivers/power/power.h>
 #include <application/shell/shell.h>
 
 int main(void)
@@ -18,7 +19,7 @@ int main(void)
 	ret = ditto_i2c_open();
 
 	// get mem size
-	ret get_mem_size();
+	ret = get_mem_size();
 
 	// activate uart open.
 	ret = ditto_uart_open();

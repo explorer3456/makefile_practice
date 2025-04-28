@@ -66,16 +66,17 @@ CFLAGS += -Iinclude
 DEPS=$(OBJECT_LIST:%.o=%.d)
 -include DEPS
 
+# create directory first
 all: $(output_dir)/program.elf
-	mkdir -p $(output_dir)
-	mkdir -p $(objects_dir)
+
+clean:
+	rm -rf $(output_dir)
 
 debug:
 	$(info debug $(CFLAGS))
+	
 
 $(output_dir)/program.elf: $(OBJECT_LIST)
-	mkdir -p $(output_dir)
-	mkdir -p $(objects_dir)
 	$(info --target is build with $(OBJECT_LIST))
 
 # according to software type, build rule can be different.
@@ -84,3 +85,19 @@ $(output_dir)/program.elf: $(OBJECT_LIST)
 # So it is possible that build rules applies differently to different software types.
 
 # common software build rule
+build/objs/%.o: $(common_dir)/*/%.c
+	mkdir -p $(output_dir)
+	mkdir -p $(objects_dir)
+	$(CC) $(CFLAGS) -c $(<) -o $(@)
+
+# common software build rule
+build/objs/%.o: $(drivers_dir)/*/%.c
+	mkdir -p $(output_dir)
+	mkdir -p $(objects_dir)
+	$(CC) $(CFLAGS) -c $(<) -o $(@)
+
+# common software build rule
+build/objs/%.o: $(app_dir)/*/%.c
+	mkdir -p $(output_dir)
+	mkdir -p $(objects_dir)
+	$(CC) $(CFLAGS) -c $(<) -o $(@)
