@@ -6,7 +6,14 @@ EXTERNAL_TOOL_DIR=$(PWD)/external
 # toolchain location
 TOOLCHAIN_DIR=$(PWD)/toolchain
 
+.PHONY: debug
 .PHONY: all
+
+debug:
+	@echo $(TOOLCHAIN_DIR)
+	@echo $(EXTERNAL_TOOL_DIR)
+	$(info this is debug message $(TOOLCHAIN_DIR))
 
 all:
 	@echo $(TOOLCHAIN_DIR)
+	@echo $(EXTERNAL_TOOL_DIR)
