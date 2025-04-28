@@ -26,8 +26,13 @@
 > and build directory that final output goes.
 > * build/
 > * build/objs/
+**Build system feature**
+> build system includes not only just build sources, but also includes remove output files,
+> copy output files, check version .. etc
 
-# Important makefile design
+
+
+# Important specific makefile design
 **How do we get list of source files ?**
 
 # To Do
