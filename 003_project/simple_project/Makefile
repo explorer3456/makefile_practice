@@ -30,6 +30,7 @@ LDFLAGS += -Wl,--map=$(output_dir)/map.txt
 
 .PHONY: debug
 .PHONY: all
+.PHONY: clean
 
 # input source files directory.
 common_dir=common
@@ -69,9 +70,15 @@ CFLAGS += $(addprefix -I, $(HEADER_LIST))
 DEPS=$(OBJECT_LIST:%.o=%.d)
 -include DEPS
 
+all: $(output_dir)/program.elf
+	mkdir -p $(output_dir)
+	mkdir -p $(objects_dir)
 
 debug:
 	$(info debug $(CFLAGS))
 
-all:
-	$(info make all)
+$(output_dir)/program.elf: $(OBJECT_LIST)
+	mkdir -p $(output_dir)
+	mkdir -p $(objects_dir)
+	$(info --target is build with $(OBJECT_LIST))
+	
