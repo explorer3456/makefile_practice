@@ -60,11 +60,7 @@ OBJECT_LIST = $(OBJECT_COMMON) $(OBJECT_DRIVERS) $(OBJECT_APP)
 
 
 # add include folder path to CFLAGS
-HEADER_COMMON=$(shell find include/$(common_dir) -name "*.h")
-HEADER_DRIVERS=$(shell find include/$(drivers_dir) -name "*.h")
-HEADER_APP=$(shell find include/$(app_dir) -name "*.h")
-HEADER_LIST=$(HEADER_COMMON) $(HEADER_DRIVERS) $(HEADER_APP)
-CFLAGS += $(addprefix -I, $(HEADER_LIST))
+CFLAGS += -Iinclude
 
 # add header file and object file dependency
 DEPS=$(OBJECT_LIST:%.o=%.d)
@@ -81,4 +77,10 @@ $(output_dir)/program.elf: $(OBJECT_LIST)
 	mkdir -p $(output_dir)
 	mkdir -p $(objects_dir)
 	$(info --target is build with $(OBJECT_LIST))
-	
+
+# according to software type, build rule can be different.
+# device driver may need non-optimization flags becuase it mostly control registers.
+# where application may need high optimization flags. 
+# So it is possible that build rules applies differently to different software types.
+
+# common software build rule
