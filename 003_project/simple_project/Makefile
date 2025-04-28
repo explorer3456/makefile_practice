@@ -9,6 +9,8 @@ TOOLCHAIN_DIR=$(PWD)/toolchain
 .PHONY: debug
 .PHONY: all
 
+# source files directory.
+
 debug:
 	@echo $(TOOLCHAIN_DIR)
 	@echo $(EXTERNAL_TOOL_DIR)
