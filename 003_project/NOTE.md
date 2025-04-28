@@ -58,6 +58,9 @@
 > build/objs/%.o : source_path
 > note that DO NOT use % in directory substitution. Only use in file placeholder
 > ( bad example: ex) common/%/%.c. 
+**Final step. Define final target rule**
+> you should link every object file you created to compile final target.
+> after build, you can run readelf, objdump -h , nm -n , ELF analyzing tool to get information about ELF file.
 
 
 # To Do

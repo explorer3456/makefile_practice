@@ -5,6 +5,16 @@ EXTERNAL_TOOL_DIR=$(PWD)/external
 
 # toolchain location
 TOOLCHAIN_DIR=$(PWD)/toolchain
+
+# input source files directory.
+common_dir=common
+drivers_dir=drivers
+app_dir=application
+
+# output file directory
+output_dir=build
+objects_dir=$(output_dir)/objs/
+
 # Compiler variable
 # toolchain
 CC = arm-linux-gnueabi-gcc
@@ -26,22 +36,13 @@ CFLAGS += -static-libgcc
 #LDFLAGS += -Ttext=0x0
 LDFLAGS += -Xlinker -static
 # LDFLAGS += -nostartfiles
-LDFLAGS += -Wl,--map=$(output_dir)/map.txt
+LDFLAGS += -Wl,-Map=$(output_dir)/map.txt
 LDFLAGS += -static-libgcc
 
 
 .PHONY: debug
 .PHONY: all
 .PHONY: clean
-
-# input source files directory.
-common_dir=common
-drivers_dir=drivers
-app_dir=application
-
-# output file directory
-output_dir=build
-objects_dir=$(output_dir)/objs/
 
 
 # input source file list
