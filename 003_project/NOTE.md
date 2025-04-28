@@ -44,7 +44,10 @@
 > final goal is generate final.elf file. before that, we need to put all the objects file into
 > some build/objs directory.
 > so define the output directory and object file list using input source file lists.
-
+**Step5. initialize CFLAGS and LDFLAGS**
+> CLFAGS and LDFLAGS has default option such as build with gdb debug symbol or dwarf information
+> If you use linker script, linker script can be added to LDFLAGS. 
+> Important, the path to header files must be added to CFLAGS.
 
 
 

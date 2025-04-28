@@ -58,10 +58,15 @@ OBJECT_APP=$(addprefix $(objects_dir), $(notdir $(OUTPUT_APP)))
 OBJECT_LIST = $(OBJECT_COMMON) $(OBJECT_DRIVERS) $(OBJECT_APP)
 
 
+# add include folder path to CFLAGS
+HEADER_COMMON=$(shell find include/$(common_dir) -name "*.h")
+HEADER_DRIVERS=$(shell find include/$(drivers_dir) -name "*.h")
+HEADER_APP=$(shell find include/$(app_dir) -name "*.h")
+HEADER_LIST=$(HEADER_COMMON) $(HEADER_DRIVERS) $(HEADER_APP)
 
 
 debug:
-	$(info debug $(OBJECT_LIST))
+	$(info debug $(HEADER_LIST))
 
 all:
 	$(info make all)
