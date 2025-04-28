@@ -5,6 +5,28 @@ EXTERNAL_TOOL_DIR=$(PWD)/external
 
 # toolchain location
 TOOLCHAIN_DIR=$(PWD)/toolchain
+# Compiler variable
+# toolchain
+CC = arm-linux-gnueabi-gcc
+AS = arm-linux-gnueabi-gcc
+LD = arm-linux-gnueabi-gcc
+
+### C compiler flags
+CFLAGS += -c
+#CFLAGS += -mcpu=cortex-m3
+#CFLAGS += -mfpu=fpv4-sp-d16
+#CFLAGS += -mfloat-abi=soft
+CFLAGS += -ggdb
+CFLAGS += -gdwarf-3
+CFLAGS += -std=c99
+
+### C Linker flags
+#LDFLAGS += -T $(linkerdir)/linker.ld
+#LDFLAGS += -Ttext=0x0
+LDFLAGS += -Xlinker -static
+LDFLAGS += -nostartfiles
+LDFLAGS += -Wl,--map=$(output_dir)/map.txt
+
 
 .PHONY: debug
 .PHONY: all
@@ -12,7 +34,7 @@ TOOLCHAIN_DIR=$(PWD)/toolchain
 # input source files directory.
 common_dir=common
 drivers_dir=drivers
-app_dir=appplication
+app_dir=application
 
 # output file directory
 output_dir=build
@@ -30,16 +52,16 @@ OUTPUT_DRIVERS=$(SOURCE_DRIVERS:.c=.o)
 OUTPUT_APP=$(SOURCE_APP:.c=.o)
 
 # output files - object lists
+OBJECT_COMMON=$(addprefix $(objects_dir), $(notdir $(OUTPUT_COMMON)))
+OBJECT_DRIVERS=$(addprefix $(objects_dir), $(notdir $(OUTPUT_DRIVERS)))
+OBJECT_APP=$(addprefix $(objects_dir), $(notdir $(OUTPUT_APP)))
+OBJECT_LIST = $(OBJECT_COMMON) $(OBJECT_DRIVERS) $(OBJECT_APP)
+
 
 
 
 debug:
-	@echo $(TOOLCHAIN_DIR)
-	@echo $(EXTERNAL_TOOL_DIR)
-	$(info this is debug message $(TOOLCHAIN_DIR))
-	$(info debug $(SOURCE_COMMON))
-	$(info debug $(SOURCE_DRIVERS))
-	$(info debug $(OUTPUT_COMMON))
+	$(info debug $(OBJECT_LIST))
 
 all:
 	$(info make all)
