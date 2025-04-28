@@ -52,11 +52,20 @@
 > with -MDD option in CFLAGS, gcc automatically generate header dependency info file(*.d).
 > you should include that files to Makefile so that when header file changes, 
 > source code that is related to header file can be recompiled.
- 
+**Step7. Define target rule**
+> it is not neccessary to define final target.
+> you can increment the target rules, sub-target rules.
+> build/objs/%.o : source_path
+> note that DO NOT use % in directory substitution. Only use in file placeholder
+> ( bad example: ex) common/%/%.c. 
+
 
 # To Do
 **Try seperate makefile per module**
 > Final makefile contains all the build rules, how about seperate the rule into
 > module.mk ?
+
+# Bug report
+> just hitting 'make' is not the way I expected. It checks build/objs/cache.o first.
 
 	
