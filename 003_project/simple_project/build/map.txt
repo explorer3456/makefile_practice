@@ -61,7 +61,7 @@ Archive member included to satisfy reference by file (symbol)
 /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/libc.a(iofopen.o)
                               /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/libc.a(localealias.o) (_IO_new_fopen)
 /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/libc.a(ioputs.o)
-                              build/objs/cache.o (puts)
+                              /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/cache.o (puts)
 /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/libc.a(wfileops.o)
                               /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/libc.a(iofopen.o) (_IO_wfile_jumps_maybe_mmap)
 /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/libc.a(iofwide.o)
@@ -698,21 +698,21 @@ Discarded input sections
  .note.GNU-stack
                 0x0000000000000000        0x0 /usr/lib/gcc-cross/arm-linux-gnueabi/11/crtbegin.o
  .note.GNU-stack
-                0x0000000000000000        0x0 build/objs/cache.o
+                0x0000000000000000        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/cache.o
  .note.GNU-stack
-                0x0000000000000000        0x0 build/objs/malloc.o
+                0x0000000000000000        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/malloc.o
  .note.GNU-stack
-                0x0000000000000000        0x0 build/objs/uart.o
+                0x0000000000000000        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/uart.o
  .note.GNU-stack
-                0x0000000000000000        0x0 build/objs/power.o
+                0x0000000000000000        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/power.o
  .note.GNU-stack
-                0x0000000000000000        0x0 build/objs/dram.o
+                0x0000000000000000        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/dram.o
  .note.GNU-stack
-                0x0000000000000000        0x0 build/objs/i2c.o
+                0x0000000000000000        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/i2c.o
  .note.GNU-stack
-                0x0000000000000000        0x0 build/objs/shell.o
+                0x0000000000000000        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/shell.o
  .note.GNU-stack
-                0x0000000000000000        0x0 build/objs/app.o
+                0x0000000000000000        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/app.o
  .note.GNU-stack
                 0x0000000000000000        0x0 /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/libc.a(libc-start.o)
  .note.GNU-stack
@@ -1420,14 +1420,14 @@ Linker script and memory map
 LOAD /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/crt1.o
 LOAD /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/crti.o
 LOAD /usr/lib/gcc-cross/arm-linux-gnueabi/11/crtbegin.o
-LOAD build/objs/cache.o
-LOAD build/objs/malloc.o
-LOAD build/objs/uart.o
-LOAD build/objs/power.o
-LOAD build/objs/dram.o
-LOAD build/objs/i2c.o
-LOAD build/objs/shell.o
-LOAD build/objs/app.o
+LOAD /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/cache.o
+LOAD /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/malloc.o
+LOAD /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/uart.o
+LOAD /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/power.o
+LOAD /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/dram.o
+LOAD /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/i2c.o
+LOAD /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/shell.o
+LOAD /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/app.o
 LOAD /usr/lib/gcc-cross/arm-linux-gnueabi/11/libgcc.a
 LOAD /usr/lib/gcc-cross/arm-linux-gnueabi/11/libgcc_eh.a
 LOAD /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/libc.a
@@ -1546,21 +1546,21 @@ LOAD /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/c
                 0x0000000000010418                _start
  .text          0x000000000001045c       0x24 /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/crti.o
  .text          0x0000000000010480       0x90 /usr/lib/gcc-cross/arm-linux-gnueabi/11/crtbegin.o
- .text          0x0000000000010510       0x20 build/objs/cache.o
+ .text          0x0000000000010510       0x20 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/cache.o
                 0x0000000000010510                ditto_cache_sync
- .text          0x0000000000010530       0x30 build/objs/malloc.o
+ .text          0x0000000000010530       0x30 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/malloc.o
                 0x0000000000010530                ditto_malloc
- .text          0x0000000000010560       0x30 build/objs/uart.o
+ .text          0x0000000000010560       0x30 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/uart.o
                 0x0000000000010560                ditto_uart_open
- .text          0x0000000000010590       0x20 build/objs/power.o
+ .text          0x0000000000010590       0x20 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/power.o
                 0x0000000000010590                ditto_power_open
- .text          0x00000000000105b0       0x1c build/objs/dram.o
+ .text          0x00000000000105b0       0x1c /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/dram.o
                 0x00000000000105b0                get_mem_size
- .text          0x00000000000105cc       0x20 build/objs/i2c.o
+ .text          0x00000000000105cc       0x20 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/i2c.o
                 0x00000000000105cc                ditto_i2c_open
- .text          0x00000000000105ec       0x34 build/objs/shell.o
+ .text          0x00000000000105ec       0x34 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/shell.o
                 0x00000000000105ec                ditto_run_shell
- .text          0x0000000000010620       0x44 build/objs/app.o
+ .text          0x0000000000010620       0x44 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/app.o
                 0x0000000000010620                main
  .text          0x0000000000010664      0x4bc /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/libc.a(libc-start.o)
                 0x0000000000010774                __libc_start_main_impl
@@ -2889,16 +2889,16 @@ __libc_freeres_fn
  .rodata.cst4   0x000000000006e394        0x4 /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/crt1.o
                 0x000000000006e394                _IO_stdin_used
  .rodata        0x000000000006e398       0x90 /usr/lib/gcc-cross/arm-linux-gnueabi/11/crtbegin.o
- .rodata        0x000000000006e428       0x11 build/objs/cache.o
+ .rodata        0x000000000006e428       0x11 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/cache.o
  *fill*         0x000000000006e439        0x3 
- .rodata        0x000000000006e43c       0x10 build/objs/uart.o
- .rodata        0x000000000006e44c       0x11 build/objs/power.o
+ .rodata        0x000000000006e43c       0x10 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/uart.o
+ .rodata        0x000000000006e44c       0x11 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/power.o
  *fill*         0x000000000006e45d        0x3 
- .rodata        0x000000000006e460        0xf build/objs/i2c.o
+ .rodata        0x000000000006e460        0xf /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/i2c.o
  *fill*         0x000000000006e46f        0x1 
- .rodata        0x000000000006e470        0xa build/objs/shell.o
+ .rodata        0x000000000006e470        0xa /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/shell.o
  *fill*         0x000000000006e47a        0x2 
- .rodata        0x000000000006e47c        0xd build/objs/app.o
+ .rodata        0x000000000006e47c        0xd /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/app.o
  *fill*         0x000000000006e489        0x3 
  .rodata.str1.4
                 0x000000000006e48c       0xc3 /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/libc.a(libc-start.o)
@@ -3703,14 +3703,14 @@ __libc_freeres_fn
  .data          0x0000000000098254        0x0 /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/crti.o
  .data          0x0000000000098254        0x4 /usr/lib/gcc-cross/arm-linux-gnueabi/11/crtbegin.o
                 0x0000000000098254                __dso_handle
- .data          0x0000000000098258        0x0 build/objs/cache.o
- .data          0x0000000000098258        0x0 build/objs/malloc.o
- .data          0x0000000000098258        0x0 build/objs/uart.o
- .data          0x0000000000098258        0x0 build/objs/power.o
- .data          0x0000000000098258        0x0 build/objs/dram.o
- .data          0x0000000000098258        0x0 build/objs/i2c.o
- .data          0x0000000000098258        0x0 build/objs/shell.o
- .data          0x0000000000098258        0x0 build/objs/app.o
+ .data          0x0000000000098258        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/cache.o
+ .data          0x0000000000098258        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/malloc.o
+ .data          0x0000000000098258        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/uart.o
+ .data          0x0000000000098258        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/power.o
+ .data          0x0000000000098258        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/dram.o
+ .data          0x0000000000098258        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/i2c.o
+ .data          0x0000000000098258        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/shell.o
+ .data          0x0000000000098258        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/app.o
  .data          0x0000000000098258        0x0 /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/libc.a(libc-start.o)
  .data          0x0000000000098258        0x0 /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/libc.a(check_fds.o)
  .data          0x0000000000098258        0x0 /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/libc.a(libc-tls.o)
@@ -4178,14 +4178,14 @@ __libc_atexit   0x0000000000099390        0x4
  .bss           0x0000000000099398        0x0 /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/crt1.o
  .bss           0x0000000000099398        0x0 /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/crti.o
  .bss           0x0000000000099398        0x1 /usr/lib/gcc-cross/arm-linux-gnueabi/11/crtbegin.o
- .bss           0x0000000000099399        0x0 build/objs/cache.o
- .bss           0x0000000000099399        0x0 build/objs/malloc.o
- .bss           0x0000000000099399        0x0 build/objs/uart.o
- .bss           0x0000000000099399        0x0 build/objs/power.o
- .bss           0x0000000000099399        0x0 build/objs/dram.o
- .bss           0x0000000000099399        0x0 build/objs/i2c.o
- .bss           0x0000000000099399        0x0 build/objs/shell.o
- .bss           0x0000000000099399        0x0 build/objs/app.o
+ .bss           0x0000000000099399        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/cache.o
+ .bss           0x0000000000099399        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/malloc.o
+ .bss           0x0000000000099399        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/uart.o
+ .bss           0x0000000000099399        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/power.o
+ .bss           0x0000000000099399        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/dram.o
+ .bss           0x0000000000099399        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/i2c.o
+ .bss           0x0000000000099399        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/shell.o
+ .bss           0x0000000000099399        0x0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/app.o
  .bss           0x0000000000099399        0x0 /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/libc.a(libc-start.o)
  .bss           0x0000000000099399        0x0 /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/libc.a(check_fds.o)
  *fill*         0x0000000000099399        0x3 
@@ -4657,14 +4657,14 @@ __libc_freeres_ptrs
  *(.comment)
  .comment       0x0000000000000000       0x2b /usr/lib/gcc-cross/arm-linux-gnueabi/11/crtbegin.o
                                          0x2c (size before relaxing)
- .comment       0x000000000000002b       0x2c build/objs/cache.o
- .comment       0x000000000000002b       0x2c build/objs/malloc.o
- .comment       0x000000000000002b       0x2c build/objs/uart.o
- .comment       0x000000000000002b       0x2c build/objs/power.o
- .comment       0x000000000000002b       0x2c build/objs/dram.o
- .comment       0x000000000000002b       0x2c build/objs/i2c.o
- .comment       0x000000000000002b       0x2c build/objs/shell.o
- .comment       0x000000000000002b       0x2c build/objs/app.o
+ .comment       0x000000000000002b       0x2c /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/cache.o
+ .comment       0x000000000000002b       0x2c /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/malloc.o
+ .comment       0x000000000000002b       0x2c /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/uart.o
+ .comment       0x000000000000002b       0x2c /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/power.o
+ .comment       0x000000000000002b       0x2c /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/dram.o
+ .comment       0x000000000000002b       0x2c /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/i2c.o
+ .comment       0x000000000000002b       0x2c /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/shell.o
+ .comment       0x000000000000002b       0x2c /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/app.o
  .comment       0x000000000000002b       0x2c /usr/lib/gcc-cross/arm-linux-gnueabi/11/crtend.o
 
 .ARM.attributes
@@ -4676,21 +4676,21 @@ __libc_freeres_ptrs
  .ARM.attributes
                 0x0000000000000048       0x2a /usr/lib/gcc-cross/arm-linux-gnueabi/11/crtbegin.o
  .ARM.attributes
-                0x0000000000000072       0x2a build/objs/cache.o
+                0x0000000000000072       0x2a /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/cache.o
  .ARM.attributes
-                0x000000000000009c       0x2a build/objs/malloc.o
+                0x000000000000009c       0x2a /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/malloc.o
  .ARM.attributes
-                0x00000000000000c6       0x2a build/objs/uart.o
+                0x00000000000000c6       0x2a /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/uart.o
  .ARM.attributes
-                0x00000000000000f0       0x2a build/objs/power.o
+                0x00000000000000f0       0x2a /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/power.o
  .ARM.attributes
-                0x000000000000011a       0x2a build/objs/dram.o
+                0x000000000000011a       0x2a /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/dram.o
  .ARM.attributes
-                0x0000000000000144       0x2a build/objs/i2c.o
+                0x0000000000000144       0x2a /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/i2c.o
  .ARM.attributes
-                0x000000000000016e       0x2a build/objs/shell.o
+                0x000000000000016e       0x2a /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/shell.o
  .ARM.attributes
-                0x0000000000000198       0x2a build/objs/app.o
+                0x0000000000000198       0x2a /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/app.o
  .ARM.attributes
                 0x00000000000001c2       0x2c /usr/lib/gcc-cross/arm-linux-gnueabi/11/../../../../arm-linux-gnueabi/lib/libc.a(libc-start.o)
  .ARM.attributes
@@ -5402,87 +5402,87 @@ __libc_freeres_ptrs
 .debug_aranges  0x0000000000000000      0x100
  *(.debug_aranges)
  .debug_aranges
-                0x0000000000000000       0x20 build/objs/cache.o
+                0x0000000000000000       0x20 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/cache.o
  .debug_aranges
-                0x0000000000000020       0x20 build/objs/malloc.o
+                0x0000000000000020       0x20 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/malloc.o
  .debug_aranges
-                0x0000000000000040       0x20 build/objs/uart.o
+                0x0000000000000040       0x20 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/uart.o
  .debug_aranges
-                0x0000000000000060       0x20 build/objs/power.o
+                0x0000000000000060       0x20 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/power.o
  .debug_aranges
-                0x0000000000000080       0x20 build/objs/dram.o
+                0x0000000000000080       0x20 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/dram.o
  .debug_aranges
-                0x00000000000000a0       0x20 build/objs/i2c.o
+                0x00000000000000a0       0x20 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/i2c.o
  .debug_aranges
-                0x00000000000000c0       0x20 build/objs/shell.o
+                0x00000000000000c0       0x20 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/shell.o
  .debug_aranges
-                0x00000000000000e0       0x20 build/objs/app.o
+                0x00000000000000e0       0x20 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/app.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
 .debug_info     0x0000000000000000      0x5c6
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x0000000000000000       0x8c build/objs/cache.o
- .debug_info    0x000000000000008c       0xb7 build/objs/malloc.o
- .debug_info    0x0000000000000143       0xd9 build/objs/uart.o
- .debug_info    0x000000000000021c       0xbb build/objs/power.o
- .debug_info    0x00000000000002d7       0x8c build/objs/dram.o
- .debug_info    0x0000000000000363       0xbb build/objs/i2c.o
- .debug_info    0x000000000000041e       0xc1 build/objs/shell.o
- .debug_info    0x00000000000004df       0xe7 build/objs/app.o
+ .debug_info    0x0000000000000000       0x8c /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/cache.o
+ .debug_info    0x000000000000008c       0xb7 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/malloc.o
+ .debug_info    0x0000000000000143       0xd9 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/uart.o
+ .debug_info    0x000000000000021c       0xbb /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/power.o
+ .debug_info    0x00000000000002d7       0x8c /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/dram.o
+ .debug_info    0x0000000000000363       0xbb /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/i2c.o
+ .debug_info    0x000000000000041e       0xc1 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/shell.o
+ .debug_info    0x00000000000004df       0xe7 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/app.o
 
 .debug_abbrev   0x0000000000000000      0x363
  *(.debug_abbrev)
- .debug_abbrev  0x0000000000000000       0x46 build/objs/cache.o
- .debug_abbrev  0x0000000000000046       0x77 build/objs/malloc.o
- .debug_abbrev  0x00000000000000bd       0x94 build/objs/uart.o
- .debug_abbrev  0x0000000000000151       0x6e build/objs/power.o
- .debug_abbrev  0x00000000000001bf       0x46 build/objs/dram.o
- .debug_abbrev  0x0000000000000205       0x6e build/objs/i2c.o
- .debug_abbrev  0x0000000000000273       0x84 build/objs/shell.o
- .debug_abbrev  0x00000000000002f7       0x6c build/objs/app.o
+ .debug_abbrev  0x0000000000000000       0x46 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/cache.o
+ .debug_abbrev  0x0000000000000046       0x77 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/malloc.o
+ .debug_abbrev  0x00000000000000bd       0x94 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/uart.o
+ .debug_abbrev  0x0000000000000151       0x6e /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/power.o
+ .debug_abbrev  0x00000000000001bf       0x46 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/dram.o
+ .debug_abbrev  0x0000000000000205       0x6e /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/i2c.o
+ .debug_abbrev  0x0000000000000273       0x84 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/shell.o
+ .debug_abbrev  0x00000000000002f7       0x6c /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/app.o
 
-.debug_line     0x0000000000000000      0x3ce
+.debug_line     0x0000000000000000      0x676
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x0000000000000000       0x4a build/objs/cache.o
- .debug_line    0x000000000000004a       0x8e build/objs/malloc.o
- .debug_line    0x00000000000000d8       0x6c build/objs/uart.o
- .debug_line    0x0000000000000144       0x4b build/objs/power.o
- .debug_line    0x000000000000018f       0x49 build/objs/dram.o
- .debug_line    0x00000000000001d8       0x47 build/objs/i2c.o
- .debug_line    0x000000000000021f       0xb0 build/objs/shell.o
- .debug_line    0x00000000000002cf       0xff build/objs/app.o
+ .debug_line    0x0000000000000000       0x9f /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/cache.o
+ .debug_line    0x000000000000009f       0xe3 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/malloc.o
+ .debug_line    0x0000000000000182       0xc1 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/uart.o
+ .debug_line    0x0000000000000243       0xa0 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/power.o
+ .debug_line    0x00000000000002e3       0x9e /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/dram.o
+ .debug_line    0x0000000000000381       0x9c /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/i2c.o
+ .debug_line    0x000000000000041d      0x105 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/shell.o
+ .debug_line    0x0000000000000522      0x154 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/app.o
 
 .debug_frame    0x0000000000000000      0x170
  *(.debug_frame)
- .debug_frame   0x0000000000000000       0x2c build/objs/cache.o
- .debug_frame   0x000000000000002c       0x30 build/objs/malloc.o
- .debug_frame   0x000000000000005c       0x30 build/objs/uart.o
- .debug_frame   0x000000000000008c       0x2c build/objs/power.o
- .debug_frame   0x00000000000000b8       0x30 build/objs/dram.o
- .debug_frame   0x00000000000000e8       0x2c build/objs/i2c.o
- .debug_frame   0x0000000000000114       0x30 build/objs/shell.o
- .debug_frame   0x0000000000000144       0x2c build/objs/app.o
+ .debug_frame   0x0000000000000000       0x2c /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/cache.o
+ .debug_frame   0x000000000000002c       0x30 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/malloc.o
+ .debug_frame   0x000000000000005c       0x30 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/uart.o
+ .debug_frame   0x000000000000008c       0x2c /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/power.o
+ .debug_frame   0x00000000000000b8       0x30 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/dram.o
+ .debug_frame   0x00000000000000e8       0x2c /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/i2c.o
+ .debug_frame   0x0000000000000114       0x30 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/shell.o
+ .debug_frame   0x0000000000000144       0x2c /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/app.o
 
-.debug_str      0x0000000000000000      0x249
+.debug_str      0x0000000000000000      0x4f1
  *(.debug_str)
- .debug_str     0x0000000000000000      0x143 build/objs/cache.o
-                                        0x17c (size before relaxing)
- .debug_str     0x0000000000000143       0x2b build/objs/malloc.o
-                                        0x186 (size before relaxing)
- .debug_str     0x000000000000016e       0x2d build/objs/uart.o
-                                        0x194 (size before relaxing)
- .debug_str     0x000000000000019b       0x27 build/objs/power.o
-                                        0x186 (size before relaxing)
- .debug_str     0x00000000000001c2       0x21 build/objs/dram.o
-                                        0x177 (size before relaxing)
- .debug_str     0x00000000000001e3       0x21 build/objs/i2c.o
-                                        0x180 (size before relaxing)
- .debug_str     0x0000000000000204       0x2a build/objs/shell.o
-                                        0x194 (size before relaxing)
- .debug_str     0x000000000000022e       0x1b build/objs/app.o
-                                        0x1be (size before relaxing)
+ .debug_str     0x0000000000000000      0x198 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/cache.o
+                                        0x1d1 (size before relaxing)
+ .debug_str     0x0000000000000198       0x80 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/malloc.o
+                                        0x1db (size before relaxing)
+ .debug_str     0x0000000000000218       0x82 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/uart.o
+                                        0x1e9 (size before relaxing)
+ .debug_str     0x000000000000029a       0x7c /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/power.o
+                                        0x1db (size before relaxing)
+ .debug_str     0x0000000000000316       0x76 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/dram.o
+                                        0x1cc (size before relaxing)
+ .debug_str     0x000000000000038c       0x76 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/i2c.o
+                                        0x1d5 (size before relaxing)
+ .debug_str     0x0000000000000402       0x7f /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/shell.o
+                                        0x1e9 (size before relaxing)
+ .debug_str     0x0000000000000481       0x70 /home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/objs/app.o
+                                        0x213 (size before relaxing)
 
 .debug_loc
  *(.debug_loc)
@@ -5542,5 +5542,5 @@ __libc_freeres_ptrs
  *(.note.GNU-stack)
  *(.gnu_debuglink)
  *(.gnu.lto_*)
-OUTPUT(build/program.elf elf32-littlearm)
+OUTPUT(/home/jhkim/project/udemy/make_practice/makefile_practice/003_project/simple_project/build/program.elf elf32-littlearm)
 LOAD linker stubs
