@@ -1,6 +1,6 @@
 # module makefile
 
-common_dir=$(root_dir)/common
+common_dir=common
 
 SOURCE_COMMON=$(shell find $(common_dir)/ -name "*.c")
 OUTPUT_COMMON=$(SOURCE_COMMON:.c=.o)

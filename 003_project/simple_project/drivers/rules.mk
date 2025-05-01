@@ -1,6 +1,6 @@
 # module makefile
 
-drv_dir=$(root_dir)/drivers
+drv_dir=drivers
 
 SOURCE_DRV=$(shell find $(drv_dir)/ -name "*.c")
 OUTPUT_DRV=$(SOURCE_DRV:.c=.o)

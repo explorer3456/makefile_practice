@@ -7,8 +7,8 @@ EXTERNAL_TOOL_DIR=$(PWD)/external
 TOOLCHAIN_DIR=$(PWD)/toolchain
 
 # output file directory
-root_dir=$(shell pwd)
-output_dir=$(root_dir)/build
+#root_dir=$(shell pwd)
+output_dir=build
 objects_dir=$(output_dir)/objs/
 
 # Compiler variable
