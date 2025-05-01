@@ -7,12 +7,12 @@ EXTERNAL_TOOL_DIR=$(PWD)/external
 TOOLCHAIN_DIR=$(PWD)/toolchain
 
 # input source files directory.
-common_dir=common
 drivers_dir=drivers
 app_dir=application
 
 # output file directory
-output_dir=build
+root_dir=$(shell pwd)
+output_dir=$(root_dir)/build
 objects_dir=$(output_dir)/objs/
 
 # Compiler variable
@@ -31,6 +31,12 @@ CFLAGS += -gdwarf-3
 CFLAGS += -std=c99
 CFLAGS += -static-libgcc
 
+# add include folder path to CFLAGS
+CFLAGS += -Iinclude
+
+# add header file and object file dependency
+CFLAGS += -MD
+
 ### C Linker flags
 #LDFLAGS += -T $(linkerdir)/linker.ld
 #LDFLAGS += -Ttext=0x0
@@ -39,34 +45,34 @@ LDFLAGS += -Xlinker -static
 LDFLAGS += -Wl,-Map=$(output_dir)/map.txt
 LDFLAGS += -static-libgcc
 
+# OBJECT_LIST will be filled by other module.mk files
+OBJECT_LIST := 
 
 .PHONY: debug
 .PHONY: all
 .PHONY: clean
 
+-include common/common.mk
 
 # input source file list
-SOURCE_COMMON=$(wildcard $(common_dir)/*/*.c)
+# SOURCE_COMMON=$(wildcard $(common_dir)/*/*.c)
 SOURCE_DRIVERS=$(shell find $(drivers_dir) -name "*.c")
 SOURCE_APP=$(shell find $(app_dir) -name "*.c")
 
 # output files list
-OUTPUT_COMMON=$(SOURCE_COMMON:.c=.o)
+# OUTPUT_COMMON=$(SOURCE_COMMON:.c=.o)
 OUTPUT_DRIVERS=$(SOURCE_DRIVERS:.c=.o)
 OUTPUT_APP=$(SOURCE_APP:.c=.o)
 
 # output files - object lists
-OBJECT_COMMON=$(addprefix $(objects_dir), $(notdir $(OUTPUT_COMMON)))
+# OBJECT_COMMON=$(addprefix $(objects_dir), $(notdir $(OUTPUT_COMMON)))
 OBJECT_DRIVERS=$(addprefix $(objects_dir), $(notdir $(OUTPUT_DRIVERS)))
 OBJECT_APP=$(addprefix $(objects_dir), $(notdir $(OUTPUT_APP)))
-OBJECT_LIST = $(OBJECT_COMMON) $(OBJECT_DRIVERS) $(OBJECT_APP)
+# OBJECT_LIST = $(OBJECT_COMMON) $(OBJECT_DRIVERS) $(OBJECT_APP)
+OBJECT_LIST += $(OBJECT_DRIVERS) $(OBJECT_APP)
 
 
-# add include folder path to CFLAGS
-CFLAGS += -Iinclude
 
-# add header file and object file dependency
-CFLAGS += -MD
 
 DEPS=$(OBJECT_LIST:%.o=%.d)
 -include $(DEPS)
@@ -83,8 +89,9 @@ clean:
 	rm -rf $(output_dir)
 
 debug:
-	$(info debug $(CFLAGS))
-	$(info debug $(DEPS))
+#	$(info debug $(CFLAGS))
+#	$(info debug $(DEPS))
+	$(info debug $(OBJECT_LIST))
 	
 
 $(output_dir)/program.elf: $(OBJECT_LIST)
@@ -97,8 +104,8 @@ $(output_dir)/program.elf: $(OBJECT_LIST)
 # So it is possible that build rules applies differently to different software types.
 
 # common software build rule
-$(objects_dir)%.o: $(common_dir)/*/%.c
-	$(CC) $(CFLAGS) -c $(<) -o $(@)
+#$(objects_dir)%.o: $(common_dir)/*/%.c
+#	$(CC) $(CFLAGS) -c $(<) -o $(@)
 
 # common software build rule
 $(objects_dir)%.o: $(drivers_dir)/*/%.c
